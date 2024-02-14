@@ -52,30 +52,31 @@ export const Actions = ({
         side={side}
         sideOffset={sideOffset}
         className="w-60"
-        onClick={(e) => e.stopPropagation()}>
-        <DropdownMenuItem
-          className="p-3 cursor-pointer"
-          onClick={onCopyLink}>
-          <Link2 className="h-4 w-4 mr-2" />
+        onClick={(e) => e.stopPropagation()}
+      >
+        <DropdownMenuItem className="cursor-pointer p-3" onClick={onCopyLink}>
+          <Link2 className="mr-2 h-4 w-4" />
           Copy board link
         </DropdownMenuItem>
         <DropdownMenuItem
-          className="p-3 cursor-pointer"
-          onClick={() => onOpen(id, title)}>
-          <Pencil className="h-4 w-4 mr-2" />
+          className="cursor-pointer p-3"
+          onClick={() => onOpen(id, title)}
+        >
+          <Pencil className="mr-2 h-4 w-4" />
           Rename
         </DropdownMenuItem>
         <ConfirmModal
           header="Delete board?"
           description="This will delete the board and all of its contents"
           disabled={pending}
-          onConfirm={onDelete}>
+          onConfirm={onDelete}
+        >
           <Button
             variant="ghost"
-            className="p-3 cursor-pointer text-sm w-full justify-start font-normal"
+            className="w-full cursor-pointer justify-start p-3 text-sm font-normal"
             // onClick={onDelete}
           >
-            <Trash2 className="h-4 w-4 mr-2 text-red-500" />
+            <Trash2 className="mr-2 h-4 w-4 text-red-500" />
             Delete
           </Button>
         </ConfirmModal>
